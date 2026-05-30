@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+
+    <title>RedDrink - Minuman Es Cup Kekinian</title>
+    
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./dist/output.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fa-solid fa-mug-hot text-primary text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight text-gray-900">Red<span class="text-primary">Drink</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-600 hover:text-primary font-medium transition">Beranda</a>
+                    <a href="#menu" class="text-gray-600 hover:text-primary font-medium transition">Menu</a>
+                    <a href="#lokasi" class="text-gray-600 hover:text-primary font-medium transition">Lokasi</a>
+                    <a href="https://wa.me/6282322316366?text=Halo%20RedDrink,%20saya%20mau%20pesan!" target="_blank" class="bg-primary hover:bg-primaryDark text-white px-5 py-2 rounded-full font-medium transition shadow-lg hover:shadow-red-500/30 flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> Pesan
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-16 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-red-50">Beranda</a>
+                <a href="#menu" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-red-50">Menu</a>
+                <a href="#lokasi" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-red-50">Lokasi</a>
+                <a href="https://wa.me/6282322316366?text=Halo%20RedDrink,%20saya%20mau%20pesan!" class="block w-full text-center mt-4 bg-primary text-white px-5 py-3 rounded-lg font-bold shadow-md">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="public/image/es-cup.png" alt="Background Es Cup" class="w-full h-full object-cover">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-4 text-center text-white">
+            <span class="inline-block py-1 px-3 rounded-full bg-accent/90 text-white text-sm font-semibold mb-4 animate-bounce">
+                🔥 Promo Opening: Diskon 20%
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight drop-shadow-lg">
+                Haus? <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">Segarin Aja!</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200 font-light">
+                Nikmati kesegaran minuman es cup kekinian dengan topping melimpah. Harga kaki lima, rasa bintang lima!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#menu" class="bg-primary hover:bg-primaryDark text-white px-8 py-3 rounded-full font-bold text-lg transition transform hover:-translate-y-1 shadow-lg shadow-red-600/40">
+                    Lihat Menu
+                </a>
+                <a href="https://wa.me/6282322316366" class="bg-white hover:bg-gray-100 text-primary px-8 py-3 rounded-full font-bold text-lg transition transform hover:-translate-y-1 shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-green-500"></i> Hubungi Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Info Singkat -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-2xl hover:bg-red-50 transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-4 text-primary text-2xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Bahan Segar</h3>
+                    <p class="text-gray-500">Menggunakan buah asli dan sirup premium berkualitas tinggi.</p>
+                </div>
+                <div class="p-6 rounded-2xl hover:bg-orange-50 transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-orange-100 rounded-full flex items-center justify-center mb-4 text-accent text-2xl">
+                        <i class="fa-solid fa-tags"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Harga Terjangkau</h3>
+                    <p class="text-gray-500">Mulai dari Rp 5.000,- kamu sudah bisa menikmati kesegaran.</p>
+                </div>
+                <div class="p-6 rounded-2xl hover:bg-red-50 transition duration-300">
+                    <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center mb-4 text-primary text-2xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Proses Cepat</h3>
+                    <p class="text-gray-500">Pembuatan cepat, tidak perlu menunggu lama untuk segelas es.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Produk -->
+    <section id="menu" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Menu Favorit</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Pilihan minuman paling laris yang wajib kamu coba!</p>
+            </div>
+
+            <!-- Filter Buttons (Visual Only for Demo) -->
+            <div class="flex justify-center gap-3 mb-10 overflow-x-auto no-scrollbar pb-2">
+                <button class="px-6 py-2 rounded-full bg-primary text-white font-medium shadow-md whitespace-nowrap">Semua</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-200 hover:border-primary hover:text-primary font-medium transition whitespace-nowrap">Kopi</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-200 hover:border-primary hover:text-primary font-medium transition whitespace-nowrap">Non-Kopi</button>
+                <button class="px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-200 hover:border-primary hover:text-primary font-medium transition whitespace-nowrap">Soda</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="public/image/esteh-cup.png" alt="Es Teh Manis" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">Best Seller</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Es Teh Manis</h3>
+                            <span class="text-primary font-bold text-lg">Rp 5k</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Teh pilihan diseduh sempurna dengan gula asli dan es batu menyegarkan.</p>
+                        <a href="https://wa.me/6282322316366?text=Halo,%20saya%20mau%20pesan%20Es%20Teh%20Manis" target="_blank" class="block w-full text-center py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition">
+                            Pesan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="public/image/matcha-cup.png" alt="Es Kopi Alpukat" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Es Kopi Alpukat</h3>
+                            <span class="text-primary font-bold text-lg">Rp 15k</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Perpaduan creamy alpukat segar dengan espresso yang kuat.</p>
+                        <a href="https://wa.me/6282322316366?text=Halo,%20saya%20mau%20pesan%20Es%20Kopi%20Alpukat" target="_blank" class="block w-full text-center py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition">
+                            Pesan
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="public/image/red-velvet.png" alt="Red Velvet" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">New</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Red Velvet Milk</h3>
+                            <span class="text-primary font-bold text-lg">Rp 12k</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Susu merah velvet yang lembut dengan topping cream cheese.</p>
+                        <a href="https://wa.me/6282322316366?text=Halo,%20saya%20mau%20pesan%20Red%20Velvet" target="_blank" class="block w-full text-center py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition">
+                            Pesan
+                        </a>
+                    </div>
+                </div>
+
+                 <!-- Product Card 4 -->
+                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="public/image/es-cup.png" alt="Es Kopi Alpukat" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Es Jeruk Murni</h3>
+                            <span class="text-primary font-bold text-lg">Rp 8k</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4">Perasan jeruk peras asli tanpa pemanis buatan.</p>
+                        <a href="https://wa.me/6282322316366?text=Halo,%20saya%20mau%20pesan%20Es%20Jeruk" target="_blank" class="block w-full text-center py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition">
+                            Pesan
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-primary font-bold hover:text-primaryDark transition">
+                    Lihat Semua Menu <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lokasi Section -->
+    <section id="lokasi" class="py-20 bg-white relative overflow-hidden">
+        <!-- Decorative Circle -->
+        <div class="absolute -left-20 top-20 w-64 h-64 bg-red-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+        <div class="absolute -right-20 bottom-20 w-64 h-64 bg-orange-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Temukan Kami</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600">Mampir langsung ke warung kami untuk merasakan sensasi segarnya!</p>
+            </div>
+
+            <div class="w-full h-[450px] bg-gray-200 rounded-2xl overflow-hidden shadow-lg relative group">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4664676451873!2d106.82496467499024!3d-6.175392393812345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764536d%3A0x3d2ad6e1e039bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="filter grayscale group-hover:grayscale-0 transition duration-500">
+                </iframe>
+                
+                <div class="absolute bottom-6 left-0 right-0 flex justify-center pointer-events-none">
+                    <a href="https://goo.gl/maps/example" target="_blank" class="pointer-events-auto bg-white/95 backdrop-blur px-6 py-3 rounded-full shadow-xl text-sm font-bold text-primary hover:bg-white hover:scale-105 transition transform flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i> Buka Navigasi Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-mug-hot text-primary text-2xl"></i>
+                        <span class="font-bold text-2xl tracking-tight">Red<span class="text-primary">Drink</span></span>
+                    </div>
+                    <p class="text-gray-400 max-w-sm">
+                        Menyediakan berbagai macam minuman es cup segar dengan harga terjangkau. Tempat nongkrong asik buat semua kalangan.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-accent">Navigasi</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#menu" class="hover:text-white transition">Menu</a></li>
+                        <li><a href="#lokasi" class="hover:text-white transition">Lokasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-accent">Sosial Media</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2023 RedDrink. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282322316366?text=Halo%20RedDrink,%20saya%20mau%20tanya-tanya%20dong!" 
+       target="_blank"
+       class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center justify-center float-animation">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="src/main.js"></script>
+</body>
+</html>
